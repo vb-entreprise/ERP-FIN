@@ -1,0 +1,622 @@
+[
+  {
+    "id": "TC001",
+    "title": "User Login with Valid Credentials",
+    "description": "Verify that a user can successfully log in with valid username/email and password.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid username/email and password."
+      },
+      {
+        "type": "action",
+        "description": "Click the login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the user is redirected to the customizable dashboard."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify user-specific key business metrics are displayed on the dashboard."
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "User Login with Invalid Credentials",
+    "description": "Verify that login fails with invalid credentials and proper error message is displayed.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page."
+      },
+      {
+        "type": "action",
+        "description": "Enter invalid username/email or password."
+      },
+      {
+        "type": "action",
+        "description": "Click the login button."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm login is denied with an appropriate error message."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no dashboard is accessible without authentication."
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Dashboard Metrics Accuracy and Responsiveness",
+    "description": "Validate that the dashboard displays accurate real-time metrics and charts, and is responsive across devices.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login with valid user credentials."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all key metrics and visual data summaries load correctly and reflect real-time data."
+      },
+      {
+        "type": "action",
+        "description": "Resize the browser window and access dashboard on mobile device."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm layout adjusts properly and remains usable on different screen sizes."
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "CRM Module - Lead Creation and Validation",
+    "description": "Check the creation of a new lead via modal in CRM and validate required inputs and error handling.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the CRM module and open the 'Create Lead' modal."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid lead information including name, contact details, and lead source."
+      },
+      {
+        "type": "action",
+        "description": "Submit the lead creation form."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the lead is added to the CRM leads list with accurate data."
+      },
+      {
+        "type": "action",
+        "description": "Open 'Create Lead' modal, submit empty or invalid data."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm validation errors are displayed and submission is blocked."
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Project Management - Task Board Manipulation",
+    "description": "Verify users can create, move, and edit tasks on the project task board, including edge cases like invalid data.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the Project Management module's Task Board."
+      },
+      {
+        "type": "action",
+        "description": "Create a new task with valid title, assigned user, and due date."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new task appears correctly on the task board."
+      },
+      {
+        "type": "action",
+        "description": "Drag and drop the task to a different status column."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm task status updates accordingly and is saved."
+      },
+      {
+        "type": "action",
+        "description": "Edit the task with invalid data such as empty title."
+      },
+      {
+        "type": "assertion",
+        "description": "Check for validation errors preventing invalid updates."
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Finance Module - Invoice Creation and Payment Processing",
+    "description": "Ensure creating invoices with valid data works correctly and payment can be recorded via modal.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Finance -> Invoices and open the 'Create Invoice' modal."
+      },
+      {
+        "type": "action",
+        "description": "Fill required invoice fields including client, items, amounts, and tax configurations."
+      },
+      {
+        "type": "action",
+        "description": "Submit invoice creation."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify new invoice appears in the invoice list with correct details and tax applied."
+      },
+      {
+        "type": "action",
+        "description": "Open 'Record Payment' modal for the new invoice."
+      },
+      {
+        "type": "action",
+        "description": "Enter payment details and submit."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm invoice status updates to paid or partially paid with accurate payment record."
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Marketing Module - Campaign Creation and Lead Scoring",
+    "description": "Test creation of marketing campaigns and application of lead scoring rules with valid and invalid inputs.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Marketing -> Campaigns and open 'Create Campaign' modal."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid campaign name, start/end dates, and targeted leads."
+      },
+      {
+        "type": "action",
+        "description": "Submit campaign creation."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify campaign is created and listed correctly."
+      },
+      {
+        "type": "action",
+        "description": "Navigate to Lead Scoring and create a new scoring rule with conditions and points."
+      },
+      {
+        "type": "assertion",
+        "description": "Check scoring rule applies correctly to leads and impacts lead scores."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to create a scoring rule with missing conditions."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm proper validation error is shown and rule creation is blocked."
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Document Management - Contract Upload and E-Signature Flow",
+    "description": "Verify uploading a contract document, assigning e-signatures, and maintaining version history functionality.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Documents -> Contracts and upload a new contract file."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm contract is saved and appears in the contract list."
+      },
+      {
+        "type": "action",
+        "description": "Initiate e-signature process on the uploaded contract."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify e-signature requests are sent, and signed documents update status accordingly."
+      },
+      {
+        "type": "action",
+        "description": "Upload an updated version of the contract."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure version history tracks the new version separately and preserves earlier versions."
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Reports & Analytics - Custom Dashboard Creation and Export",
+    "description": "Validate creating custom reports dashboards, viewing them, and exporting report data in supported formats.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Reports -> Builder and create a new custom dashboard with selected widgets."
+      },
+      {
+        "type": "action",
+        "description": "Save and view the new dashboard."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify widgets display accurate and updated data."
+      },
+      {
+        "type": "action",
+        "description": "Export the dashboard report data in CSV and PDF formats."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm exports complete successfully with correct data content."
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Helpdesk System - Ticket Lifecycle and SLA Compliance",
+    "description": "Test creating, updating, resolving support tickets, and verifying SLA tracking and escalation behavior.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Helpdesk -> Tickets and create a new support ticket with valid details."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm ticket is created and visible in the ticket list with correct metadata."
+      },
+      {
+        "type": "action",
+        "description": "Update ticket status through various stages (open, in progress, resolved)."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify status updates, notifications, and activity feeds reflect changes."
+      },
+      {
+        "type": "action",
+        "description": "Simulate SLA time expiry and observe escalation or alert triggers."
+      },
+      {
+        "type": "assertion",
+        "description": "Check SLA warnings and escalations are generated as per configuration."
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "HR Management - Employee Directory and Leave Requests",
+    "description": "Validate employee records management and leave request submission, approval, and tracking.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to HR -> Directory and add a new employee via modal form with all required data."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the new employee appears correctly in the directory list."
+      },
+      {
+        "type": "action",
+        "description": "Submit a leave request form for the employee."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm leave request appears in pending approvals."
+      },
+      {
+        "type": "action",
+        "description": "Approve and reject leave requests and verify the employee's leave balance updates accordingly."
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Asset Management - Registering and Tracking Inventory Items",
+    "description": "Check the process of adding new assets and inventory stock levels with updates and validations.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Assets -> Register and open the 'Create Asset' modal."
+      },
+      {
+        "type": "action",
+        "description": "Enter valid asset details and submit."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the asset is listed with accurate information."
+      },
+      {
+        "type": "action",
+        "description": "Update stock levels and record purchase orders."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify stock and purchase records update accurately and reflect current inventory."
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Billing System - Recurring Billing and Contract Library Access",
+    "description": "Test creation, modification, and proper billing cycles for recurring billing plans and access contract library.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Billing -> Recurring Billing and create a new recurring billing plan."
+      },
+      {
+        "type": "action",
+        "description": "Set billing frequency, amount, and linked contract."
+      },
+      {
+        "type": "action",
+        "description": "Save the billing plan."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm billing plan appears with correct details and activates on schedule."
+      },
+      {
+        "type": "action",
+        "description": "Access Billing -> Contract Library and review contract documents."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify contracts load correctly and support search and filtering."
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Workflow Automation - Event Triggers and Approval Chains",
+    "description": "Validate creation and execution of workflow automations using event triggers, scheduled tasks, and multi-step approval chains.",
+    "category": "functional",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Workflow -> Builder and create a workflow with event trigger conditions."
+      },
+      {
+        "type": "action",
+        "description": "Configure approval chain with multiple approvers and conditional steps."
+      },
+      {
+        "type": "action",
+        "description": "Activate the workflow."
+      },
+      {
+        "type": "assertion",
+        "description": "Trigger the event and confirm the approval chain routes correctly to designated approvers."
+      },
+      {
+        "type": "action",
+        "description": "Set scheduled task within the workflow."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the scheduled task executes at configured times."
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Collaboration Tools - Chat Comments and Activity Feeds",
+    "description": "Test sending chat messages, posting comments, and verifying activity feed entries for collaboration accuracy.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Collaboration -> ChatComments and send a chat message."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm the message appears for all relevant team members in real time."
+      },
+      {
+        "type": "action",
+        "description": "Post comments on a project or task."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify comments display correctly and associate with the correct entities."
+      },
+      {
+        "type": "action",
+        "description": "Check Collaboration -> Activity Feed for recent activities including chats and comments."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm activity feed entries are accurate, timestamped, and order correct."
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Quality Management - Audit Logs and Document Approvals",
+    "description": "Ensure audit logs correctly record changes and document approvals process work according to workflow policies.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Perform modifications on documents and system settings."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all changes are recorded in the audit logs with user and timestamp."
+      },
+      {
+        "type": "action",
+        "description": "Submit a document for approval and route through document approval workflow."
+      },
+      {
+        "type": "assertion",
+        "description": "Check document approval statuses update accordingly and access controls enforce approval states."
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Modal System - Validation and Error Handling During Entity Creation",
+    "description": "Test all entity creation modals for proper input validation, error handling, and successful entity creation.",
+    "category": "error handling",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Open creation modal for a variety of entities (lead, invoice, project, asset, employee, etc.)."
+      },
+      {
+        "type": "action",
+        "description": "Submit each modal with missing or invalid required fields."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify each modal displays relevant validation errors and blocks submission."
+      },
+      {
+        "type": "action",
+        "description": "Submit modals with valid data."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm entities are created successfully and reflected in their respective modules."
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Authentication and Authorization Controls",
+    "description": "Verify users are authorized only for permitted modules and features, with access denied otherwise.",
+    "category": "security",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login with user account having restricted permissions."
+      },
+      {
+        "type": "action",
+        "description": "Attempt to access restricted modules and perform unauthorized actions."
+      },
+      {
+        "type": "assertion",
+        "description": "Confirm access is denied with appropriate messaging or UI restrictions."
+      },
+      {
+        "type": "action",
+        "description": "Login with admin user."
+      },
+      {
+        "type": "action",
+        "description": "Access all modules and perform unrestricted actions."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify full access and functionality available to admin users."
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "System Settings Management - Update and Persistence",
+    "description": "Test updating system-wide configurations and confirm that changes persist and take effect immediately or on reload.",
+    "category": "functional",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to Settings module."
+      },
+      {
+        "type": "action",
+        "description": "Change various system settings such as default tax rates, user preferences, and notification configurations."
+      },
+      {
+        "type": "action",
+        "description": "Save settings and reload the application."
+      },
+      {
+        "type": "assertion",
+        "description": "Verify changes persist and application behavior aligns with updated configurations."
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Performance Benchmark under Typical Load",
+    "description": "Verify application responsiveness and performance meet standards when multiple modules and heavy data loads are in use.",
+    "category": "performance",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Login as a user with access to multiple modules."
+      },
+      {
+        "type": "action",
+        "description": "Simulate typical workload: loading dashboards, performing CRUD operations across modules, and running reports."
+      },
+      {
+        "type": "assertion",
+        "description": "Measure and verify response times are within acceptable limits (e.g., page loads under 2 seconds)."
+      },
+      {
+        "type": "assertion",
+        "description": "Ensure no data loss or UI freezes occur during the workload."
+      }
+    ]
+  }
+]

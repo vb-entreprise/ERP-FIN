@@ -1,0 +1,16 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:5173",
+  "executionArgs": {
+    "projectName": "ERP",
+    "projectPath": "v:/ERP",
+    "testIds": [],
+    "additionalInstruction": "Focus on testing the core ERP functionality including dashboard navigation, CRM features, project management, finance modules, and modal interactions. Test the responsive design and ensure all major modules are accessible and functional.",
+    "envs": {
+      "API_KEY": "sk-user-GS8jlNS6uK-3YUKUovHvC46rX84nLypRuzwfCqt8w39p6OnFAIyc4zWbCm2fZKH7yCFxxvCvo4hx-Ys3xJggnn8ZZ7FwhAxKRFtAoa2BnNWKogCLceHA9035nFPBeMNEons"
+    }
+  },
+  "proxy": "http://0d62a6fb-659e-4d13-9b59-a877cad51305:EmPRnORdHdGaxbCUZzICFUHjac6vQMaE@tun.testsprite.com:8080"
+}

@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "project": "Comprehensive ERP System",
+    "date": "2025-07-30",
+    "prepared_by": "Software Development Manager"
+  },
+  "product_overview": "A fully integrated ERP system built with modern web technologies providing comprehensive modules for enterprise resource planning including CRM, project management, finance, marketing, HR, and more, designed to streamline business operations and improve productivity.",
+  "core_goals": [
+    "Offer a unified platform for managing all critical business functions.",
+    "Provide real-time data visualization and reporting for informed decision making.",
+    "Enable seamless collaboration and communication across teams.",
+    "Automate workflows and approval processes to enhance efficiency.",
+    "Support scalability and customization through modular design."
+  ],
+  "key_features": [
+    "Dashboard presenting key metrics and visual data summaries.",
+    "CRM module managing leads, contacts, opportunities, and proposals.",
+    "Project Management including task boards, Gantt charts, and resource allocation.",
+    "Financial module handling invoices, payments, expenses, and tax configurations.",
+    "Marketing tools for campaign management, lead scoring, and analytics.",
+    "Document management featuring contracts, e-signatures, and version control.",
+    "Robust reporting and analytics with customizable dashboards and export options.",
+    "Helpdesk system supporting tickets, SLA management, and client portals.",
+    "HR management covering employee directory, timesheets, leave, and onboarding.",
+    "Asset management tracking inventory, licenses, and purchase orders.",
+    "Billing system with contract libraries, recurring billing, and milestone payments.",
+    "Workflow automation with event triggers, scheduled tasks, and approval chains.",
+    "Business intelligence tools including predictive forecasting and data warehousing.",
+    "Collaboration features with chat comments, activity feeds, and scheduling.",
+    "Quality management ensuring compliance with audit logs and document approvals.",
+    "Comprehensive settings management and system configuration.",
+    "Modern UI built with React, Vite, and Tailwind CSS, utilizing a modular modal system for entity management."
+  ],
+  "user_flow_summary": [
+    "Users log in and access a customizable dashboard displaying key business metrics.",
+    "Navigate through ERP modules via sidebar to access functionalities such as CRM, Projects, Finance, etc.",
+    "Create and manage records using modals for entities like leads, contacts, invoices, projects, and assets.",
+    "Use project management tools to track tasks, timelines, and resource allocation visually.",
+    "Perform financial transactions and manage billing cycles through dedicated finance and billing modules.",
+    "Set up and monitor marketing campaigns and lead scoring to optimize sales funnel.",
+    "Access and update documents with e-signature functionalities ensuring version control.",
+    "Generate reports and dashboards, export data for external analysis.",
+    "Manage customer support tickets, track SLA compliance, and provide knowledge base access.",
+    "HR personnel manage employee information, track time, leave requests, and onboarding processes.",
+    "Automate business workflows with configurable triggers, scheduled tasks, and approval systems.",
+    "Collaborate using integrated chat, activity feeds, and meeting scheduling features.",
+    "Adjust system settings and preferences to fit organizational requirements."
+  ],
+  "validation_criteria": [
+    "All ERP modules are accessible and fully functional with no critical bugs.",
+    "Data across modules sync correctly and display accurate real-time metrics.",
+    "User interface components are responsive and accessible across devices.",
+    "Workflow automations trigger as configured and approval chains process correctly.",
+    "Reports generate accurate data with export functions working reliably.",
+    "Authentication and authorization controls ensure data security and user privacy.",
+    "Performance benchmarks meet the required responsive standards under typical load.",
+    "Modals create and manage ERP entities correctly with input validation and error handling.",
+    "Integration points between modules communicate effectively without data loss or corruption."
+  ],
+  "code_summary": {
+    "tech_stack": [
+      "TypeScript",
+      "React",
+      "Vite",
+      "React Router DOM",
+      "Tailwind CSS",
+      "Lucide React",
+      "Recharts",
+      "React Grid Layout",
+      "Date-fns"
+    ],
+    "features": [
+      {
+        "name": "Dashboard",
+        "description": "Main dashboard with metrics, charts, and overview of all ERP modules",
+        "files": [
+          "src/pages/Dashboard.tsx",
+          "src/components/Dashboard/MetricCard.tsx"
+        ]
+      },
+      {
+        "name": "CRM Module",
+        "description": "Customer Relationship Management with leads, contacts, opportunities, and proposals",
+        "files": [
+          "src/pages/CRM.tsx",
+          "src/pages/CRM/Leads.tsx",
+          "src/pages/CRM/Contacts.tsx",
+          "src/pages/CRM/Opportunities.tsx",
+          "src/pages/CRM/Proposals.tsx"
+        ]
+      },
+      {
+        "name": "Project Management",
+        "description": "Project tracking with task boards, Gantt charts, and resource allocation",
+        "files": [
+          "src/pages/Projects.tsx",
+          "src/pages/Projects/AllProjects.tsx",
+          "src/pages/Projects/TaskBoards.tsx",
+          "src/pages/Projects/GanttCharts.tsx",
+          "src/pages/Projects/ResourceAllocation.tsx"
+        ]
+      },
+      {
+        "name": "Finance Module",
+        "description": "Financial management including invoices, payments, expenses, and tax settings",
+        "files": [
+          "src/pages/Finance.tsx",
+          "src/pages/Finance/Invoices.tsx",
+          "src/pages/Finance/Payments.tsx",
+          "src/pages/Finance/Expenses.tsx",
+          "src/pages/Finance/TaxSettings.tsx"
+        ]
+      },
+      {
+        "name": "Marketing Module",
+        "description": "Marketing campaigns, lead scoring, landing pages, and analytics",
+        "files": [
+          "src/pages/Marketing.tsx",
+          "src/pages/Marketing/Campaigns.tsx",
+          "src/pages/Marketing/LeadScoring.tsx",
+          "src/pages/Marketing/LandingPages.tsx",
+          "src/pages/Marketing/Analytics.tsx"
+        ]
+      },
+      {
+        "name": "Document Management",
+        "description": "Document handling with contracts, e-signatures, and version history",
+        "files": [
+          "src/pages/Documents.tsx",
+          "src/pages/Documents/Contracts.tsx",
+          "src/pages/Documents/ESignatures.tsx",
+          "src/pages/Documents/VersionHistory.tsx"
+        ]
+      },
+      {
+        "name": "Reports & Analytics",
+        "description": "Reporting system with dashboard builder and export functionality",
+        "files": [
+          "src/pages/Reports.tsx",
+          "src/pages/Reports/Dashboards.tsx",
+          "src/pages/Reports/Builder.tsx",
+          "src/pages/Reports/Exports.tsx"
+        ]
+      },
+      {
+        "name": "Helpdesk System",
+        "description": "Customer support with tickets, SLA management, knowledge base, and client portal",
+        "files": [
+          "src/pages/Helpdesk/Tickets.tsx",
+          "src/pages/Helpdesk/SLA.tsx",
+          "src/pages/Helpdesk/KnowledgeBase.tsx",
+          "src/pages/Helpdesk/ClientPortal.tsx"
+        ]
+      },
+      {
+        "name": "HR Management",
+        "description": "Human resources with employee directory, timesheets, leave management, and onboarding",
+        "files": [
+          "src/pages/HR/Directory.tsx",
+          "src/pages/HR/Timesheets.tsx",
+          "src/pages/HR/LeaveManagement.tsx",
+          "src/pages/HR/Onboarding.tsx"
+        ]
+      },
+      {
+        "name": "Asset Management",
+        "description": "Asset tracking including register, VPS servers, license tracking, purchase orders, and stock levels",
+        "files": [
+          "src/pages/Assets/Register.tsx",
+          "src/pages/Assets/VPSServers.tsx",
+          "src/pages/Assets/LicenseTracking.tsx",
+          "src/pages/Assets/PurchaseOrders.tsx",
+          "src/pages/Assets/StockLevels.tsx"
+        ]
+      },
+      {
+        "name": "Billing System",
+        "description": "Billing management with contract library, retainers, recurring billing, and milestone payments",
+        "files": [
+          "src/pages/Billing/ContractLibrary.tsx",
+          "src/pages/Billing/Retainers.tsx",
+          "src/pages/Billing/RecurringBilling.tsx",
+          "src/pages/Billing/MilestonePayments.tsx"
+        ]
+      },
+      {
+        "name": "Workflow Management",
+        "description": "Workflow automation with builder, event triggers, scheduled tasks, and approval chains",
+        "files": [
+          "src/pages/Workflow/Builder.tsx",
+          "src/pages/Workflow/EventTriggers.tsx",
+          "src/pages/Workflow/ScheduledTasks.tsx",
+          "src/pages/Workflow/ApprovalChains.tsx"
+        ]
+      },
+      {
+        "name": "Business Intelligence",
+        "description": "BI tools including dashboard designer, data warehouse, and predictive forecasts",
+        "files": [
+          "src/pages/BI/DashboardDesigner.tsx",
+          "src/pages/BI/DataWarehouse.tsx",
+          "src/pages/BI/PredictiveForecasts.tsx"
+        ]
+      },
+      {
+        "name": "Collaboration Tools",
+        "description": "Team collaboration with chat comments, activity feed, and meeting scheduler",
+        "files": [
+          "src/pages/Collaboration/ChatComments.tsx",
+          "src/pages/Collaboration/ActivityFeed.tsx",
+          "src/pages/Collaboration/MeetingScheduler.tsx"
+        ]
+      },
+      {
+        "name": "Quality Management",
+        "description": "Quality assurance with audit logs, document approvals, and GDPR settings",
+        "files": [
+          "src/pages/Quality/AuditLogs.tsx",
+          "src/pages/Quality/DocumentApprovals.tsx",
+          "src/pages/Quality/GDPRSettings.tsx"
+        ]
+      },
+      {
+        "name": "Layout Components",
+        "description": "Core layout components including header, sidebar, and navigation",
+        "files": [
+          "src/components/Layout/Header.tsx",
+          "src/components/Layout/Sidebar.tsx"
+        ]
+      },
+      {
+        "name": "Modal System",
+        "description": "Comprehensive modal system for creating and managing various ERP entities",
+        "files": [
+          "src/components/Modals/CreateApprovalChainModal.tsx",
+          "src/components/Modals/CreateApprovalModal.tsx",
+          "src/components/Modals/CreateArticleModal.tsx",
+          "src/components/Modals/CreateAssetModal.tsx",
+          "src/components/Modals/CreateCampaignModal.tsx",
+          "src/components/Modals/CreateChannelModal.tsx",
+          "src/components/Modals/CreateContactModal.tsx",
+          "src/components/Modals/CreateContractModal.tsx",
+          "src/components/Modals/CreateCurrencyModal.tsx",
+          "src/components/Modals/CreateDashboardModal.tsx",
+          "src/components/Modals/CreateDataSourceModal.tsx",
+          "src/components/Modals/CreateDocumentModal.tsx",
+          "src/components/Modals/CreateEmployeeModal.tsx",
+          "src/components/Modals/CreateEnvelopeModal.tsx",
+          "src/components/Modals/CreateExpenseModal.tsx",
+          "src/components/Modals/CreateInvoiceModal.tsx",
+          "src/components/Modals/CreateLandingPageModal.tsx",
+          "src/components/Modals/CreateLeadModal.tsx",
+          "src/components/Modals/CreateLeaveRequestModal.tsx",
+          "src/components/Modals/CreateLicenseModal.tsx",
+          "src/components/Modals/CreateMeetingModal.tsx",
+          "src/components/Modals/CreateMilestoneModal.tsx",
+          "src/components/Modals/CreateOnboardingModal.tsx",
+          "src/components/Modals/CreateOpportunityModal.tsx",
+          "src/components/Modals/CreatePortalModal.tsx",
+          "src/components/Modals/CreateProjectModal.tsx",
+          "src/components/Modals/CreateProposalModal.tsx",
+          "src/components/Modals/CreatePurchaseOrderModal.tsx",
+          "src/components/Modals/CreateRecurringPlanModal.tsx",
+          "src/components/Modals/CreateReportModal.tsx",
+          "src/components/Modals/CreateRetainerModal.tsx",
+          "src/components/Modals/CreateScheduledTaskModal.tsx",
+          "src/components/Modals/CreateScoringRuleModal.tsx",
+          "src/components/Modals/CreateSLAModal.tsx",
+          "src/components/Modals/CreateStockItemModal.tsx",
+          "src/components/Modals/CreateTaskModal.tsx",
+          "src/components/Modals/CreateTaxRateModal.tsx",
+          "src/components/Modals/CreateTicketModal.tsx",
+          "src/components/Modals/CreateTimeEntryModal.tsx",
+          "src/components/Modals/CreateTriggerModal.tsx",
+          "src/components/Modals/CreateUserModal.tsx",
+          "src/components/Modals/CreateVPSServerModal.tsx",
+          "src/components/Modals/CreateWorkflowModal.tsx",
+          "src/components/Modals/GenerateTaxReportModal.tsx",
+          "src/components/Modals/IntegrationModal.tsx",
+          "src/components/Modals/RecordPaymentModal.tsx",
+          "src/components/Modals/TestModal.tsx"
+        ]
+      },
+      {
+        "name": "Settings Management",
+        "description": "System settings and configuration management",
+        "files": [
+          "src/pages/Settings.tsx"
+        ]
+      },
+      {
+        "name": "Type System",
+        "description": "TypeScript type definitions for all ERP entities and data structures",
+        "files": [
+          "src/types/index.ts"
+        ]
+      },
+      {
+        "name": "Mock Data",
+        "description": "Sample data for demonstration and testing purposes",
+        "files": [
+          "src/data/mockData.ts"
+        ]
+      },
+      {
+        "name": "Main Application",
+        "description": "Core application component with routing and layout management",
+        "files": [
+          "src/App.tsx",
+          "src/main.tsx"
+        ]
+      }
+    ]
+  }
+}
